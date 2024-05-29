@@ -25,13 +25,10 @@ cp -Rfva "$HOME/.local/share/CasjaysDev/dockermgr/ubuntu/rootfs/." "$HOME/.local
 docker run -d \
 --restart always \
 --privileged \
---name casjaysdevdocker-ubuntu \
+--name casjaysdev-ubuntu \
 --hostname ubuntu \
 -e TZ=${TIMEZONE:-America/New_York} \
--v "$HOME/.local/share/srv/docker/casjaysdevdocker-ubuntu/rootfs/data:/data:z" \
--v "$HOME/.local/share/srv/docker/casjaysdevdocker-ubuntu/rootfs/config:/config:z" \
--p 80:80 \
-casjaysdevdocker/ubuntu:latest
+casjaysdev/ubuntu:latest
 ```
   
 ## via docker-compose  
@@ -40,39 +37,34 @@ casjaysdevdocker/ubuntu:latest
 version: "2"
 services:
   ProjectName:
-    image: casjaysdevdocker/ubuntu
-    container_name: casjaysdevdocker-ubuntu
+    image: casjaysdev/ubuntu
+    container_name: casjaysdev-ubuntu
     environment:
       - TZ=America/New_York
       - HOSTNAME=ubuntu
-    volumes:
-      - "$HOME/.local/share/srv/docker/casjaysdevdocker-ubuntu/rootfs/data:/data:z"
-      - "$HOME/.local/share/srv/docker/casjaysdevdocker-ubuntu/rootfs/config:/config:z"
-    ports:
-      - 80:80
     restart: always
 ```
   
 ## Get source files  
   
 ```shell
-dockermgr download src casjaysdevdocker/ubuntu
+dockermgr download src casjaysdev/ubuntu
 ```
   
 OR
   
 ```shell
-git clone "https://github.com/casjaysdevdocker/ubuntu" "$HOME/Projects/github/casjaysdevdocker/ubuntu"
+git clone "https://github.com/casjaysdev/ubuntu" "$HOME/Projects/github/casjaysdev/ubuntu"
 ```
   
 ## Build container  
   
 ```shell
-cd "$HOME/Projects/github/casjaysdevdocker/ubuntu"
+cd "$HOME/Projects/github/casjaysdev/ubuntu"
 buildx 
 ```
   
 ## Authors  
   
 🤖 casjay: [Github](https://github.com/casjay) 🤖  
-⛵ casjaysdevdocker: [Github](https://github.com/casjaysdevdocker) [Docker](https://hub.docker.com/u/casjaysdevdocker) ⛵  
+⛵ casjaysdev: [Github](https://github.com/casjaysdev) [Docker](https://hub.docker.com/u/casjaysdev) ⛵  
