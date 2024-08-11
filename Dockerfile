@@ -2,7 +2,7 @@
 # Docker image for ubuntu using the ubuntu template
 ARG IMAGE_NAME="ubuntu"
 ARG PHP_SERVER="ubuntu"
-ARG BUILD_DATE="Sun Aug 11 10:08:11 AM EDT 2024"
+ARG BUILD_DATE="Sun Aug 11 10:51:09 AM EDT 2024"
 ARG LANGUAGE="en_US.UTF-8"
 ARG TIMEZONE="America/New_York"
 ARG WWW_ROOT_DIR="/usr/share/httpd/default"
@@ -140,7 +140,7 @@ RUN echo "Updating system files "; \
 
 RUN echo "Custom Settings"; \
   $SHELL_OPTS; \
-  echo ""
+echo ""
 
 RUN echo "Setting up users and scripts "; \
   $SHELL_OPTS; \
@@ -157,7 +157,7 @@ RUN echo "Setting OS Settings "; \
 
 RUN echo "Custom Applications"; \
   $SHELL_OPTS; \
-  echo ""
+echo ""
 
 RUN echo "Running custom commands"; \
   if [ -f "/root/docker/setup/05-custom.sh" ];then echo "Running the custom script";/root/docker/setup/05-custom.sh||{ echo "Failed to execute /root/docker/setup/05-custom" && exit 10; };echo "Done running the custom script";fi; \
