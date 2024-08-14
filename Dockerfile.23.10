@@ -70,6 +70,7 @@ USER ${USER}
 WORKDIR /root
 
 COPY ./rootfs/usr/local/bin/. /usr/local/bin/
+COPY ./rootfs/tmp/apt/mantic.list /etc/apt/sources.list
 
 RUN set -e; \
   echo "Setting up prerequisites"; \

@@ -1,0 +1,14 @@
+deb mirror://mirrors.ubuntu.com/mirrors.txt jammy main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt jammy main restricted universe multiverse
+
+deb mirror://mirrors.ubuntu.com/mirrors.txt jammy-security main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt jammy-security main restricted universe multiverse
+
+deb mirror://mirrors.ubuntu.com/mirrors.txt jammy-updates main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt jammy-updates main restricted universe multiverse
+
+deb mirror://mirrors.ubuntu.com/mirrors.txt jammy-proposed main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt jammy-proposed main restricted universe multiverse
+
+deb mirror://mirrors.ubuntu.com/mirrors.txt jammy-backports main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt jammy-backports main restricted universe multiverse
