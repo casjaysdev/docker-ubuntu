@@ -1,14 +1,14 @@
-deb mirror://mirrors.ubuntu.com/mirrors.txt lunar main restricted universe multiverse
-deb-src mirror://mirrors.ubuntu.com/mirrors.txt lunar main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu lunar main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu lunar main restricted universe multiverse
 
-deb mirror://mirrors.ubuntu.com/mirrors.txt lunar-security main restricted universe multiverse
-deb-src mirror://mirrors.ubuntu.com/mirrors.txt lunar-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu lunar-security main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu lunar-security main restricted universe multiverse
 
-deb mirror://mirrors.ubuntu.com/mirrors.txt lunar-updates main restricted universe multiverse
-deb-src mirror://mirrors.ubuntu.com/mirrors.txt lunar-updates main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu lunar-updates main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu lunar-updates main restricted universe multiverse
 
-deb mirror://mirrors.ubuntu.com/mirrors.txt lunar-proposed main restricted universe multiverse
-deb-src mirror://mirrors.ubuntu.com/mirrors.txt lunar-proposed main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu lunar-proposed main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu lunar-proposed main restricted universe multiverse
 
-deb mirror://mirrors.ubuntu.com/mirrors.txt lunar-backports main restricted universe multiverse
-deb-src mirror://mirrors.ubuntu.com/mirrors.txt lunar-backports main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu lunar-backports main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu lunar-backports main restricted universe multiverse
