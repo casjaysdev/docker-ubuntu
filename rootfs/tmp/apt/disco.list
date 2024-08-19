@@ -1,0 +1,14 @@
+deb http://old-releases.ubuntu.com disco main restricted universe multiverse
+deb-src http://old-releases.ubuntu.com disco main restricted universe multiverse
+
+deb http://old-releases.ubuntu.com disco-security main restricted universe multiverse
+deb-src http://old-releases.ubuntu.com disco-security main restricted universe multiverse
+
+deb http://old-releases.ubuntu.com disco-updates main restricted universe multiverse
+deb-src http://old-releases.ubuntu.com disco-updates main restricted universe multiverse
+
+deb http://old-releases.ubuntu.com disco-proposed main restricted universe multiverse
+deb-src http://old-releases.ubuntu.com disco-proposed main restricted universe multiverse
+
+deb http://old-releases.ubuntu.com disco-backports main restricted universe multiverse
+deb-src http://old-releases.ubuntu.com disco-backports main restricted universe multiverse
