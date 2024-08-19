@@ -62,6 +62,7 @@ ENV SHELL="/bin/sh"
 ENV TZ="${TIMEZONE}"
 ENV TIMEZONE="${TZ}"
 ENV LANG="${LANGUAGE}"
+ENV LC_ALL="${LANGUAGE}"
 ENV TERM="xterm-256color"
 ENV HOSTNAME="casjaysdevdocker-ubuntu"
 ENV DEBIAN_FRONTEND="${DEBIAN_FRONTEND}"
@@ -75,7 +76,7 @@ RUN set -e; \
   echo "Setting up prerequisites"; \
   echo "$LANG UTF-8" >"/etc/locale.gen"; \
   echo 'export DEBIAN_FRONTEND="'${DEBIAN_FRONTEND}'"' >"/etc/profile.d/apt.sh" && chmod 755 "/etc/profile.d/apt.sh"; \
-  apt update && apt install -yy bash locales apt-utils; \
+  apt update && apt upgrade -yy && apt install -yy bash locales apt-utils; \
   dpkg-reconfigure --frontend=noninteractive locales;update-locale LANG=$LANG; \
   update-alternatives --install /bin/sh sh /bin/bash 1 
 
