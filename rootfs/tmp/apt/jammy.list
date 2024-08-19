@@ -1,3 +1,4 @@
+# Source list for ubuntu 22.04 - jammy
 deb http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
 deb-src http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
 
