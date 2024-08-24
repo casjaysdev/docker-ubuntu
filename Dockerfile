@@ -71,6 +71,7 @@ USER ${USER}
 WORKDIR /root
 
 COPY ./rootfs/usr/local/bin/. /usr/local/bin/
+COPY ./rootfs/etc/apt/. /etc/apt/
 
 RUN set -e; \
   echo "Setting up prerequisites"; \
