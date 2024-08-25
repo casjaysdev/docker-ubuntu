@@ -1,7 +1,7 @@
 # Source list for ubuntu 21.04 - hirsute
 deb http://old-releases.ubuntu.com/ubuntu hirsute main restricted universe multiverse
+deb http://old-releases.ubuntu.com/ubuntu hirsute-updates main restricted universe multiverse
 #deb http://old-releases.ubuntu.com/ubuntu hirsute-security main restricted universe multiverse
-#deb http://old-releases.ubuntu.com/ubuntu hirsute-updates main restricted universe multiverse
 #deb http://old-releases.ubuntu.com/ubuntu hirsute-proposed main restricted universe multiverse
 #deb http://old-releases.ubuntu.com/ubuntu hirsute-backports main restricted universe multiverse
 
