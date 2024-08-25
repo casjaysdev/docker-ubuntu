@@ -12,28 +12,28 @@ USER_GID="$(id -g)"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 [ -f "/etc/pkmgr/options.conf" ] && . "/etc/pkmgr/options.conf"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-if [ -x "$(command -v apt 2>/dev/null)" ]; then
-  export DEBIAN_FRONTEND=noninteractive
-  pkmgr_cmd="apt"
-  pkmgr_clean_cmd="$pkmgr_cmd clean"
-  pkmgr_mkcache_cmd="$pkmgr_cmd update"
-  pkmgr_update_cmd="$pkmgr_cmd upgrade -yy"
-  pkmgr_install_cmd="$pkmgr_cmd install -yy $PKMGR_OPTS"
-elif [ -x "$(command -v apt-get 2>/dev/null)" ]; then
+if [ -x "$(command -v apt-get 2>/dev/null)" ]; then
   export DEBIAN_FRONTEND=noninteractive
   pkmgr_cmd="apt-get"
   pkmgr_clean_cmd="$pkmgr_cmd clean"
   pkmgr_mkcache_cmd="$pkmgr_cmd update"
   pkmgr_update_cmd="$pkmgr_cmd upgrade -yy"
   pkmgr_install_cmd="$pkmgr_cmd install -yy $PKMGR_OPTS"
-elif [ -x "$(command -v dnf 2>/dev/null)" ]; then
-  pkmgr_cmd="dnf"
+elif [ -x "$(command -v apt 2>/dev/null)" ]; then
+  export DEBIAN_FRONTEND=noninteractive
+  pkmgr_cmd="apt"
+  pkmgr_clean_cmd="$pkmgr_cmd clean"
+  pkmgr_mkcache_cmd="$pkmgr_cmd update"
+  pkmgr_update_cmd="$pkmgr_cmd upgrade -yy"
+  pkmgr_install_cmd="$pkmgr_cmd install -yy $PKMGR_OPTS"
+elif [ -x "$(command -v yum 2>/dev/null)" ]; then
+  pkmgr_cmd="yum"
   pkmgr_clean_cmd="$pkmgr_cmd clean all"
   pkmgr_mkcache_cmd="$pkmgr_cmd makecache"
   pkmgr_update_cmd="$pkmgr_cmd update -y --skip-broken $PKMGR_OPTS"
   pkmgr_install_cmd="$pkmgr_cmd install -y --skip-broken $PKMGR_OPTS"
-elif [ -x "$(command -v yum 2>/dev/null)" ]; then
-  pkmgr_cmd="yum"
+elif [ -x "$(command -v dnf 2>/dev/null)" ]; then
+  pkmgr_cmd="dnf"
   pkmgr_clean_cmd="$pkmgr_cmd clean all"
   pkmgr_mkcache_cmd="$pkmgr_cmd makecache"
   pkmgr_update_cmd="$pkmgr_cmd update -y --skip-broken $PKMGR_OPTS"
