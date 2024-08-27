@@ -1,6 +1,6 @@
 # Source list for ubuntu 24.10 - oracular
 deb http://archive.ubuntu.com/ubuntu oracular main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu oracular-updates main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu oracular-updates main restricted universe multiverse
 #deb http://archive.ubuntu.com/ubuntu oracular-security main restricted universe multiverse
 #deb http://archive.ubuntu.com/ubuntu oracular-proposed main restricted universe multiverse
 #deb http://archive.ubuntu.com/ubuntu oracular-backports main restricted universe multiverse
