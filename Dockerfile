@@ -79,7 +79,7 @@ RUN set -e; \
   echo 'export DEBIAN_FRONTEND="'${DEBIAN_FRONTEND}'"' >"/etc/profile.d/apt.sh" && chmod 755 "/etc/profile.d/apt.sh"; \
   apt-get update;apt-get upgrade -yy;apt-get install -yy bash locales; \
   dpkg-reconfigure --frontend=noninteractive locales;update-locale LANG=$LANG; \
-  update-alternatives --install /bin/sh sh /bin/bash 1 
+  update-alternatives --install /bin/sh sh /bin/bash 1
 
 ENV SHELL="/bin/bash"
 SHELL [ "/bin/bash", "-c" ]
