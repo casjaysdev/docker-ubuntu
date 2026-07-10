@@ -19,17 +19,17 @@ dockermgr update os ubuntu
 ## Install and run container
   
 ```shell
-mkdir -p "/var/lib/srv/root/docker/casjaysdev/ubuntu/latest"
+mkdir -p "/srv/root/docker/casjaysdev/ubuntu/latest"
 git clone "https://github.com/dockermgr/ubuntu" "$HOME/.local/share/CasjaysDev/dockermgr/ubuntu"
-cp -Rfva "$HOME/.local/share/CasjaysDev/dockermgr/ubuntu/rootfs/." "/var/lib/srv/root/docker/casjaysdev/ubuntu/latest/"
+cp -Rfva "$HOME/.local/share/CasjaysDev/dockermgr/ubuntu/rootfs/." "/srv/root/docker/casjaysdev/ubuntu/latest/"
 docker run -d \
 --restart always \
 --privileged \
 --name casjaysdev-ubuntu-latest \
 --hostname ubuntu \
 -e TZ=${TIMEZONE:-America/New_York} \
--v "/var/lib/srv/root/docker/casjaysdev/ubuntu/latest/data:/data:z" \
--v "/var/lib/srv/root/docker/casjaysdev/ubuntu/latest/config:/config:z" \
+-v "/srv/root/docker/casjaysdev/ubuntu/latest/data:/data:z" \
+-v "/srv/root/docker/casjaysdev/ubuntu/latest/config:/config:z" \
 casjaysdev/ubuntu:latest
 ```
   
@@ -45,8 +45,8 @@ services:
       - TZ=America/New_York
       - HOSTNAME=ubuntu
     volumes:
-      - "/var/lib/srv/root/docker/casjaysdev/ubuntu/latest/data:/data:z"
-      - "/var/lib/srv/root/docker/casjaysdev/ubuntu/latest/config:/config:z"
+      - "/srv/root/docker/casjaysdev/ubuntu/latest/data:/data:z"
+      - "/srv/root/docker/casjaysdev/ubuntu/latest/config:/config:z"
     restart: always
 ```
   
